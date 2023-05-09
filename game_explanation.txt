@@ -1,0 +1,37 @@
+The game of Dr Nim is played between two people. 
+To play the game you need a line of coins. 
+This can be any amount, however it is typical to choose 12 coins to play.
+
+Each player takes turns choosing to remove 1, 2, or 3 coins from the line. 
+The goal of the game is to take the last coins from the line.
+
+The player that goes second is always able to win the game if they follow a strategy. 
+The strategy is to make the amount of coins a multiple of 4 at all times.
+Let's simulate a game...
+
+OOOOOOOOOOOO - 12
+Player 1 takes 3 coins
+
+OOOOOOO - 9
+The next multiple of 4 is 8 in this case so...
+Player 2 takes 1 coin.
+
+OOOOOOOO - 8
+Player 1 takes 1 coin
+
+OOOOOOO - 7
+Again, the next multiple of 4...
+Player 2 takes 3 coins
+
+OOOO - 4
+And we have Player 1 in a corner. 
+If they take 1 coins, there will be 3 left and we win. If they take 2 coins then we will take 2, and if they take 3 we take 1.
+They have no move which does not lose the game.
+
+Looking back, we have Player 1 in this situation multiple times. 
+It's the same thing when Player 1 has to take from 8 coins, because we are always able to force them to take from 4, allowing us to win.
+Also, it's the same at the very beginning of the game. Player 1 has to choose from 12 coins, but we can always force them to take from 8 next turn.
+
+That's how it's possible to win every time. 
+This strategy is very simple to code, but this program doesn't inherently know how to win every time.
+This program *learns*
